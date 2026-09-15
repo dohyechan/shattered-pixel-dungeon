@@ -70,6 +70,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRage;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfRemoveCurse;
 import com.shatteredpixel.shatteredpixeldungeon.items.scrolls.ScrollOfUpgrade;
 import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfMight;
+import com.shatteredpixel.shatteredpixeldungeon.items.rings.RingOfWealth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Cudgel;
@@ -81,6 +82,7 @@ import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortswor
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingKnife;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingSpike;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ThrowingStone;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.GreatShield;
 import com.shatteredpixel.shatteredpixeldungeon.journal.Catalog;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.watabou.utils.DeviceCompat;
@@ -107,11 +109,15 @@ public enum HeroClass {
 
 		Item i = new ClothArmor().identify();
 		if (!Challenges.isItemBlocked(i)) hero.belongings.armor = (ClothArmor)i;
-        i = new PlateArmor().identify().level(10);
+        i = new PlateArmor().identify().level(20).glyphs(AntiMagic);
 		if (!Challenges.isItemBlocked(i)) i.collect();
+		i = new GreatShield().identify().level(20).enchant(Lucky);
+		if (!Challenges.isItemBlocked(i)) i.collect();
+		i = new RingOfWealth().identify().level(20);
+		if (!Challenges.isItemBlocked(i)) i.collect()
 		i = new HornOfPlenty().identify().level(10);
 		if (!Challenges.isItemBlocked(i)) i.collect();
-        i = new RingOfMight().identify().level(10);
+        i = new RingOfMight().identify().level(20);
 		if (!Challenges.isItemBlocked(i)) i.collect();
 		i = new Food();
 		if (!Challenges.isItemBlocked(i)) i.collect();
