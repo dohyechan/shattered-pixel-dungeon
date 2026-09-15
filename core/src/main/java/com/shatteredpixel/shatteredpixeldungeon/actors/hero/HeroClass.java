@@ -114,7 +114,7 @@ public enum HeroClass {
 		i = new GreatShield().identify().level(20).enchant(Lucky);
 		if (!Challenges.isItemBlocked(i)) i.collect();
 		i = new RingOfWealth().identify().level(20);
-		if (!Challenges.isItemBlocked(i)) i.collect()
+		if (!Challenges.isItemBlocked(i)) i.collect();
 		i = new HornOfPlenty().identify().level(10);
 		if (!Challenges.isItemBlocked(i)) i.collect();
         i = new RingOfMight().identify().level(20);
