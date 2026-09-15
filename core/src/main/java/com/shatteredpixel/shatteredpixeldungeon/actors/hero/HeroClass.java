@@ -104,9 +104,12 @@ public enum HeroClass {
 
 		Item i = new ClothArmor().identify();
 		if (!Challenges.isItemBlocked(i)) hero.belongings.armor = (ClothArmor)i;
-        i = new PlateArmor().identify().level(10).enchant(antimagic);
+        i = new PlateArmor().identify().level(10);
+		if (!Challenges.isItemBlocked(i)) i.collect();
 		i = new HornOfPlanty().identify().level(10);
+		if (!Challenges.isItemBlocked(i)) i.collect();
         i = new RingOfMight().identify().level(10);
+		if (!Challenges.isItemBlocked(i)) i.collect();
 		i = new Food();
 		if (!Challenges.isItemBlocked(i)) i.collect();
 
